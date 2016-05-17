@@ -1,11 +1,9 @@
 #!/bin/bash
 
-base_dir="$UTIL_SCRIPTS_DIR/terminal"
-
 if [ `uname` == 'Darwin' ]
 then
     # add the "title" function that can be used to change the mac's terminal title in the shell
-    source $base_dir/mac_term.bash
+    source $UTIL_SCRIPTS_DIR/terminal/mac_term.bash
 else
     hash mate-screensaver-preferences 2> /dev/null
     if [ $? -eq 0 ]
