@@ -7,6 +7,7 @@ then
     export PATH=$PATH:$SQL_PLUS_HOME
 else
     # TODO
+    echo 'TODO: what do I use on linux machine in oracle_env.bash?'
 fi
 
 export TNS_ADMIN=~/tnsadmin

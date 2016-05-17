@@ -7,4 +7,5 @@ then
     alias npp=notepad++
 fi
 
-export PATH=~/tools/sublimetext2/
+export SUBLIME2_HOME=~/tools/SublimeText2
+export PATH=$PATH:$SUBLIME2_HOME
