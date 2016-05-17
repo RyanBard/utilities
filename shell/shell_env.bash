@@ -22,9 +22,9 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
 
-# TODO - vet these
-# alias meminfo='free -m -l -t'
-# alias psmem='ps auxf | sort -nr -k 4'
-# alias pscpu='ps auxf | sort -nr -k 3'
-# alias cpuinfo='lscpu'
-# alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+# TODO - vet these on a mac
+alias meminfo='free -m -l -t -h'
+alias psmem='ps auxf | sort -nr -k 4'
+alias pscpu='ps auxf | sort -nr -k 3'
+alias cpuinfo='lscpu'
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
