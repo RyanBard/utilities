@@ -3,43 +3,46 @@
 if [ `uname` == 'Darwin' ]
 then
     # setup all versions of java for later
-    export JAVA6_HOME=$(/usr/libexec/java_home -v1.6)
     export JAVA7_HOME=$(/usr/libexec/java_home -v1.7)
     export JAVA8_HOME=$(/usr/libexec/java_home -v1.8)
     # add convenient aliases for switching java versions
-    alias java6='export JAVA_HOME=$JAVA6_HOME && export PATH=$PATH:$JAVA_HOM/bin'
-    alias java7='export JAVA_HOME=$JAVA7_HOME && export PATH=$PATH:$JAVA_HOM/bin'
-    alias java8='export JAVA_HOME=$JAVA8_HOME && export PATH=$PATH:$JAVA_HOM/bin'
-    # default to java8
-    export JAVA_HOME=$JAVA8_HOME
+    alias java7='export JAVA_HOME=$JAVA7_HOME && export PATH=$JAVA_HOME/bin:$PATH'
+    alias java8='export JAVA_HOME=$JAVA8_HOME && export PATH=$JAVA_HOME/bin:$PATH'
 else
-    export JAVA_HOME=TODO
+    # setup all versions of java for later
+    export JAVA7_HOME=~/tools/java7
+    export JAVA8_HOME=~/tools/java8
+    # add convenient aliases for switching java versions
+    alias java7='export JAVA_HOME=$JAVA7_HOME && export PATH=$JAVA_HOME/bin:$PATH'
+    alias java8='export JAVA_HOME=$JAVA8_HOME && export PATH=$JAVA_HOME/bin:$PATH'
 fi
 
-export PATH=$PATH:$JAVA_HOME/bin
+# default to java8
+export JAVA_HOME=$JAVA8_HOME
+export PATH=$JAVA_HOME/bin:$PATH
 
 # jmeter is a nice testing tool written in java
-export JMETER_HOME=~/tools/apache-jmeter-2.13
+export JMETER_HOME=~/tools/apache-jmeter
 export PATH=$PATH:$JMETER_HOME/bin
 
 # groovy is a dynamic language on the JVM
-export GROOVY_HOME=~/tools/groovy-TODO
+export GROOVY_HOME=~/tools/groovy-2
 export PATH=$PATH:$GROOVY_HOME/bin
 
 # gradle is a good groovy/java build tool
-export GRADLE_HOME=~/tools/gradle-2.2.1
+export GRADLE_HOME=~/tools/gradle
 export PATH=$PATH:$GRADLE_HOME/bin
 
 # maven is a popular java build tool
-export M2_HOME=~/tools/apache-maven-3.0.5
-export PATH=$PATH:$M2_HOME/bin
+export M2_HOME=~/tools/apache-maven-3.0
+export PATH=$M2_HOME/bin:$PATH
 
 # ant is an older java build tool
-export ANT_HOME=~/tools/apache-ant-1.9.4
+export ANT_HOME=~/tools/apache-ant
 export PATH=$PATH:$ANT_HOME/bin
 
 # tomcat is a popular java servlet container
-export TC_HOME=~/tools/apache-tomcat-7.0.62
+export TC_HOME=~/tools/apache-tomcat-7
 export PATH=$PATH:$TC_HOME/bin
 
 
