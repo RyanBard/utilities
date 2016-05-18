@@ -22,6 +22,11 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
 
+function pathprint() {
+    echo -e "${PATH//:/'\n'}"
+    return $?
+}
+
 # TODO - vet these on a mac
 alias meminfo='free -m -l -t -h'
 alias psmem='ps auxf | sort -nr -k 4'
